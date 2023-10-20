@@ -1,38 +1,327 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+.darktheme {
+  --backgroundcolor: black;
+  --fontcolor: white;
+}
+.lighttheme {
+  --backgroundcolor: white;
+  --fontcolor: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  background-color: var(--backgroundcolor);
+  color: var(--fontcolor);
+  font-family: "Poppins", sans-serif;
+}
+body {
+  width: 100%;
+  outline: 5px solid blue;
+  overflow-x: hidden;
+}
+.myimg ::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  border-bottom: 5px solid #f31559;
+  border-left: 5px solid #f31559;
+}
+li {
+  margin: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.colorclass {
+  color: #f31559;
+}
+.colorbg {
+  background-color: #f31559;
+  color: var(--fontcolor);
+}
+.myimg ::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  border-top: 5px solid #f31559;
+  border-right: 5px solid #f31559;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* .boxitemcont{
+  padding: 10px;
+  position: relative;
+} */
+.boxitemcont {
+  padding: 10px;
+  width: 90%;
+  position: relative;
+}
+
+.boxitem {
+  border-left: 1px solid #f31559;
+  position: relative;
+}
+.boxitem ::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 98%;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #f31559;
+}
+.parentdiv {
+  position: relative;
+  /* background-color: var(--backgroundcolor); */
+}
+.selection:hover {
+  background-color: #f31559;
+}
+
+.carditem {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+.carditem img {
+  transition: transform 0.5s;
+}
+.carditem img:hover {
+  transform: scale(1.1);
+}
+.carddetails {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+  /* background-color: blue; */
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  overflow: hidden;
+  transition: height 0.7s;
+}
+.carditem:hover .carddetails {
+  height: 100%;
+}
+.skillcontainer {
+  padding: 10px;
+}
+.skillcontainer i {
+  margin: 10px;
+}
+.skill {
+  width: 100%;
+  height: 20%;
+  border-radius: 5px;
+  margin: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  background-color: var(--backgroundcolor);
+  border: 1px solid grey;
+  /* background-color: rgb(52, 46, 46); */
+  /* background-color: #000; */
+}
+.progress {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+}
+.maincontainer {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.contactitem {
+  margin: 7px;
+  border-radius: 5px;
+  /* background-color: rgb(21, 21, 21); */
+  /* background-color: rgb(52, 46, 46); */
+
+  width: 80%;
+  height: 35%;
+  display: flex;
+  border: 1px solid grey;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 5px;
+  line-height: 50%;
+  box-shadow: 3px 3px 3px #f31559;
+}
+.contactitem i:hover {
+  color: #f31559;
 }
 
-.App-link {
-  color: #61dafb;
+.inputbox,
+textarea {
+  width: 70%;
+  border-radius: 5px;
+  border: 2px solid var(--fontcolor);
+
+  outline: none;
+  padding: 10px;
+  color: var(--fontcolor);
+}
+::placeholder {
+  color: var(--fontcolor);
+}
+.navitem:hover {
+  color: blue !important;
+}
+/* type writer css */
+.typewriter-text {
+  font-family: monospace;
+  font-size: 35px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #000;
+  animation: typing 1s steps(20, end), blink-cursor 0.5s step-end infinite;
 }
 
-@keyframes App-logo-spin {
+@keyframes typing {
   from {
-    transform: rotate(0deg);
+    width: 0;
   }
   to {
-    transform: rotate(360deg);
+    width: 100%;
+  }
+}
+
+@keyframes blink-cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--fontcolor);
+  }
+}
+
+.darkmode {
+  position: absolute;
+  padding: 10px;
+  margin: 10px;
+  z-index: 10;
+  right: 20px;
+  cursor: pointer;
+}
+.sendbtn {
+  color: #fff;
+}
+
+.btn.button:hover {
+  background-color: #f31559;
+  transform: scale(1.1);
+  transition: transform 1s;
+}
+.skill:hover,
+.contactitem:hover {
+  transform: scale(1.1);
+  transition: transform 1s;
+}
+.active {
+  transform: scale(1.1);
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(70, 49, 49);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f31559;
+  border-radius: 10px;
+  height: 50px;
+}
+
+/* skills animation */
+.pcontent {
+  animation: progressbar 1s linear 1 none;
+}
+
+@keyframes progressbar {
+  from {
+    width: 0%;
+  }
+}
+/* responsive  */
+
+@media all and (max-width: 800px) {
+  body {
+    width: 100% !important;
+    /* outline: 10px solid blue; */
+    margin: 0;
+  }
+
+  .darkmode {
+    /* position: absolute;
+    padding: 10px;
+    margin: 10px;
+    z-index: 10;
+    right: 20px;
+    cursor: pointer; */
+    padding: 5px;
+    margin: 5px;
+  }
+  .bodycontent {
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+    background-color: var(--backgroundcolor);
+    overflow-x: hidden;
+  }
+  .mobileview {
+    width: 100% !important;
+  }
+  .mobileview2 {
+    max-width: 100% !important;
+  }
+  .bottomnavbar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 95%;
+    height: 50px;
+    margin: 10px;
+    /* border: 5px solid grey; */
+    box-shadow: 2px 6px 10px #f31559;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 7px;
+  }
+  .profileimg {
+    width: 100% !important;
+  }
+  .imgparent {
+    width: 80% !important;
+    margin-left: 10%;
+  }
+  .aboutsection {
+    width: 100vw !important;
+  }
+  .navicon {
+    margin: 20px;
+  }
+  .mobilefont {
+    font-size: 30px;
+  }
+  .typewriter-text {
+    font-size: 100%;
+  }
+  .inputbox,
+  textarea {
+    width: 90%;
   }
 }
