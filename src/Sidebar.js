@@ -92,7 +92,7 @@ function Sidebar(props) {
                     active === "projects" ? "text-danger" : " "
                   }`}
                 ></i>{" "}
-                Portfolio
+                Projects
               </NavLink>
             </li>
             <li>

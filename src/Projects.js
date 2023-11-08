@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Carditem from "./Carditem";
 import { useLocation } from "react-router-dom";
+import cardData from "./details/CardData";
 function Projects() {
   const { pathname } = useLocation();
 
@@ -11,6 +12,8 @@ function Projects() {
   const [toggleall, settoggleall] = useState(true);
   const [togglefront, settogglefront] = useState(false);
   const [toggleback, settoggleback] = useState(false);
+  const frontendcards = cardData.filter((item) => item.type === "frontend");
+  const fullstackcards = cardData.filter((item) => item.type === "fullstack");
 
   const renderprojects = () => {
     if (toggleall) {
@@ -19,79 +22,21 @@ function Projects() {
           className="d-flex flex-wrap justify-content-center align-items-center p-2 m-2"
           style={{ width: "100%" }}
         >
-          <Carditem
-            url="images/gpstracker.png"
-            name="4G Gps Tracker"
-            tech="Boostrap ,js,php ,mysql"
-            link="https://wisenet.in/gps"
-          />
-          <Carditem
-            url="images/keeper.png"
-            name="Keeper app"
-            tech="React Js"
-            link="https://b-l-sarath.github.io/keeper/"
-          />
-
-          <Carditem
-            url="images/todolist.png"
-            name="Todo list"
-            tech="HTML, CSS, Javascript"
-            link="https://b-l-sarath.github.io/todolist/"
-          />
-          <Carditem
-            url="images/pleasantvibe.png"
-            name="Music player"
-            tech="HTML ,CSS, Javascript"
-            link="https://b-l-sarath.github.io/pleasantvibe/"
-          />
-          <Carditem
-            url="images/todolistreact.png"
-            name="Todo list"
-            tech="Reactjs"
-            link="https://b-l-sarath.github.io/todolist-react/"
-          />
-          <Carditem
-            url="images/contact.png"
-            name="Contact Management"
-            tech="reactjs"
-            link="https://contactapp-steel.vercel.app/"
-          />
-          <Carditem
-            url="images/spotify.png"
-            name="music player"
-            tech="Reactjs ,React routing"
-            link="https://musicplayer-sable.vercel.app/"
-          />
-          <Carditem
-            url="images/drumstick.png"
-            name="Drum player"
-            tech="HTML, CSS,Javascript"
-            link="https://b-l-sarath.github.io/drumkit/"
-          />
-          <Carditem
-            url="images/weather.png"
-            name="Weather predictor"
-            tech="HTML, CSS,Javascript"
-            link="https://b-l-sarath.github.io/weatherapp/"
-          />
-          <Carditem
-            url="images/diceroller.png"
-            name="Dice roller"
-            tech="HTML, CSS,Javascript"
-            link="https://b-l-sarath.github.io/diceroller/"
-          />
-          <Carditem
-            url="images/dog.png"
-            name="Dog World"
-            tech="HTML,Bootstrap"
-            link="https://b-l-sarath.github.io/getthedog/"
-          />
-          <Carditem
-            url="images/ecommerce.png"
-            name="Flipkart clone"
-            tech="HTML ,Css"
-            link="https://b-l-sarath.github.io/my-ecommerce-website/"
-          />
+          {cardData.map((item, index) => {
+            console.log("i mp", index);
+            return (
+              <Carditem
+                key={index}
+                id={item.id}
+                url={item.url}
+                name={item.name}
+                tech={item.tech}
+                link={item.link}
+              
+                description={item.description}
+              />
+            );
+          })}
         </div>
       );
     } else if (togglefront) {
@@ -100,73 +45,19 @@ function Projects() {
           className="d-flex flex-wrap p-2 m-2  justify-content-center align-items-center"
           style={{ width: "100%" }}
         >
-          <Carditem
-            url="images/keeper.png"
-            name="Keeper app"
-            tech="React Js"
-            link="https://b-l-sarath.github.io/keeper/"
-          />
-
-          <Carditem
-            url="images/todolist.png"
-            name="Todo list"
-            tech="HTML, CSS, Javascript"
-            link="https://b-l-sarath.github.io/todolist/"
-          />
-          <Carditem
-            url="images/pleasantvibe.png"
-            name="Music player"
-            tech="HTML ,CSS, Javascript"
-            link="https://b-l-sarath.github.io/pleasantvibe/"
-          />
-          <Carditem
-            url="images/todolistreact.png"
-            name="Todo list"
-            tech="Reactjs"
-            link="https://b-l-sarath.github.io/todolist-react/"
-          />
-          <Carditem
-            url="images/contact.png"
-            name="Contact Management"
-            tech="reactjs"
-            link="https://contactapp-steel.vercel.app/"
-          />
-          <Carditem
-            url="images/spotify.png"
-            name="music player"
-            tech="Reactjs ,React routing"
-            link="https://musicplayer-sable.vercel.app/"
-          />
-          <Carditem
-            url="images/drumstick.png"
-            name="Drum player"
-            tech="HTML, CSS,Javascript"
-            link="https://b-l-sarath.github.io/drumkit/"
-          />
-          <Carditem
-            url="images/weather.png"
-            name="Weather predictor"
-            tech="HTML, CSS,Javascript"
-            link="https://b-l-sarath.github.io/weatherapp/"
-          />
-          <Carditem
-            url="images/diceroller.png"
-            name="Dice roller"
-            tech="HTML, CSS,Javascript"
-            link="https://b-l-sarath.github.io/diceroller/"
-          />
-          <Carditem
-            url="images/dog.png"
-            name="Dog World"
-            tech="HTML,Bootstrap"
-            link="https://b-l-sarath.github.io/getthedog/"
-          />
-          <Carditem
-            url="images/ecommerce.png"
-            name="Flipkart clone"
-            tech="HTML,Css"
-            link="https://b-l-sarath.github.io/my-ecommerce-website/"
-          />
+          {frontendcards.map((item, index) => {
+            return (
+              <Carditem
+                key={index}
+                url={item.url}
+                id={item.id}
+                name={item.name}
+                tech={item.tech}
+                link={item.link}
+                description={item.description}
+              />
+            );
+          })}
         </div>
       );
     } else if (toggleback) {
@@ -175,12 +66,19 @@ function Projects() {
           className="d-flex flex-wrap p-2 m-2  justify-content-center align-items-center"
           style={{ width: "100%" }}
         >
-          <Carditem
-            url="images/gpstracker.png"
-            name="4G Gps Tracker"
-            tech="Boostrap ,js,php ,mysql"
-            link="https://wisenet.in/gps"
-          />
+          {fullstackcards.map((item, index) => {
+            return (
+              <Carditem
+                key={index}
+                url={item.url}
+                name={item.name}
+                id={item.id}
+                tech={item.tech}
+                link={item.link}
+                description={item.description}
+              />
+            );
+          })}
         </div>
       );
     }

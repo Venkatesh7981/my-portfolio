@@ -21,11 +21,9 @@ function Home() {
         >
           <h3>
             Hello,my name is <br />{" "}
-            <span className=" fw-bold mt-5 colorclass">
-              Baswa Leela Sarath{" "}
-            </span>
+            <span className=" fw-bold mt-5 colorclass">Baswa Leela Sarath</span>
           </h3>
-          <h2 >
+          <h2>
             I'm a{" "}
             <span className="colorclass fw-bold mt-5">
               {" "}
@@ -57,7 +55,11 @@ function Home() {
 
         <div className="p-3 parentdiv imgparent">
           <div className="myimg  text-center">
-            <div className="p-lg-0 p-4 rounded-2" data-aos="flip-right" data-aos-duration="1200">
+            <div
+              className="p-lg-0 p-4 rounded-2"
+              data-aos="flip-right"
+              data-aos-duration="1200"
+            >
               <img
                 src="../images/profile1.png"
                 alt="profilepic"

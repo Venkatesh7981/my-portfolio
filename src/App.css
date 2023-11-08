@@ -33,7 +33,7 @@ li {
 }
 
 .colorclass {
-  color: #f31559;
+  color: #f31559 !important;
 }
 .colorbg {
   background-color: #f31559;
@@ -169,10 +169,18 @@ textarea {
   width: 70%;
   border-radius: 5px;
   border: 2px solid var(--fontcolor);
-
+  margin: 10px;
   outline: none;
   padding: 10px;
   color: var(--fontcolor);
+}
+.contactform span {
+  font-size: 20px;
+  color: red;
+  display: none;
+}
+.errormessage {
+  display: block;
 }
 ::placeholder {
   color: var(--fontcolor);
@@ -255,9 +263,37 @@ textarea {
     width: 0%;
   }
 }
-/* responsive  */
 
-@media all and (max-width: 800px) {
+.sunicon {
+  animation: none;
+  animation: rotate 0.2s linear forwards 1;
+}
+.moonicon {
+  animation: rotate 0.2s linear forwards reverse;
+}
+.moonrotate {
+  transform: rotateY(180deg);
+}
+
+.errorblock {
+  display: none;
+}
+.errormessage {
+  display: block;
+}
+.modalbg {
+  background-color: #f31559;
+}
+@keyframes rotate {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@media all and (max-width: 990px) {
   body {
     width: 100% !important;
     /* outline: 10px solid blue; */
@@ -295,6 +331,7 @@ textarea {
     width: 95%;
     height: 50px;
     margin: 10px;
+    margin-bottom: 3px;
     /* border: 5px solid grey; */
     box-shadow: 2px 6px 10px #f31559;
     display: flex;

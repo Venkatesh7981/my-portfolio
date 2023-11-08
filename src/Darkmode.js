@@ -1,18 +1,36 @@
 import React, { useState } from "react";
 
+import { BsSun } from "react-icons/bs";
+import { BsFillMoonStarsFill } from "react-icons/bs";
+
 function Darkmode({ updatetheme, theme }) {
+  const [isSunIcon, setIsSunIcon] = useState(false);
+  const [animate, setanimate] = useState("");
+  const restartanimation = () => {
+    setanimate("");
+    setTimeout(() => setanimate("sunicon"), 10);
+  };
+
   return (
     <div className="darkmode">
       <div
         onClick={() => {
+          setIsSunIcon((prev) => !prev);
+          restartanimation();
           updatetheme();
         }}
       >
         {theme === "darktheme" ? (
-          <i class="fa-solid fa-sun fa-2x"></i>
+          <div className={`${animate}`}>
+            <BsSun style={{ fontSize: "40px" }} />
+          </div>
         ) : (
-          <i class="fa-solid fa-moon fa-2x"></i>
+          <div className={`${animate}`}>
+            <BsFillMoonStarsFill style={{ fontSize: "40px" }} />
+          </div>
         )}
+        {/* <i class={`fa-solid fa-sun ${animate} fa-2x text-warning`}></i> */}
+        {/* <i class={`fa-solid fa-moon ${animate} moonrotate fa-3x`}></i> */}
       </div>
     </div>
   );
