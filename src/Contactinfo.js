@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect, Navigate } from "react-router-dom";
 function Contactinfo() {
   return (
     <div
@@ -11,7 +11,13 @@ function Contactinfo() {
         data-aos-duration="500"
         className="contactitem p-3"
       >
-        <i className="fa-brands fa-linkedin fa-2x  m-2"></i>
+        <Link
+          to="https://www.linkedin.com/in/leelasarath-baswa"
+          target="_blank"
+        >
+          {" "}
+          <i className="fa-brands fa-linkedin fa-2x  m-2"></i>{" "}
+        </Link>
         <h6>Linkedin</h6>
 
         <Link
@@ -28,7 +34,9 @@ function Contactinfo() {
         data-aos-delay="500"
         className="contactitem p-3"
       >
-        <i className="fa-solid fa-envelope fa-2x  m-2"></i>
+        <Link to="mailto:leelasarathbaswa@gmail.com">
+          <i className="fa-solid fa-envelope fa-2x  m-2"></i>
+        </Link>
         <h6>Email</h6>
 
         <Link
@@ -44,7 +52,9 @@ function Contactinfo() {
         data-aos-delay="1000"
         className="contactitem p-3"
       >
-        <i className="fa-brands fa-whatsapp fa-2x  m-2 "></i>
+        <Link to="https://wa.me/918074135072" target="_blank">
+          <i className="fa-brands fa-whatsapp fa-2x  m-2 "></i>
+        </Link>
         <h6>Whatsapp</h6>
 
         <Link
