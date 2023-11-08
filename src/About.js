@@ -135,7 +135,7 @@ function About() {
             <div
               className="m-3 boxitem"
               data-aos="fade-up"
-              data-aos-delay="1500"
+              data-aos-delay="100"
               data-aos-duration="1000"
               style={{ paddingLeft: "7%", width: "100%", minHeight: "20%" }}
             >
