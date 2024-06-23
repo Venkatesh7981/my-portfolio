@@ -5,8 +5,8 @@ const Skilltag = ({ name, icon, delay }) => {
     <div
       className="d-flex justify-content-around p-2 rounded-3  align-items-center mobileskillview "
       style={{ width: "180px", boxShadow: "1px 3px 3px #f31559" }}
-      data-aos="zoom-in"
-      data-aos-duration={delay}
+      // data-aos="zoom-in"
+      // data-aos-duration={1000}
     >
       <div className="inline-block" style={{ width: "50px" }}>
         <i class={`${icon}  fs-1`}></i>{" "}

@@ -124,6 +124,8 @@ function Skills() {
           <div
             style={{ width: "60%" }}
             className="p-lg-2  p-0 mobileview mobileskillmargin"
+            data-aos="zoom-in"
+            data-aos-duration={1000}
           >
             {renderprogressbar()}
           </div>
