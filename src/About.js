@@ -74,11 +74,11 @@ function About() {
         Qualification
       </h3>
       <div
-        className="d-flex justify-content-around flex-wrap mb-5"
+        className="d-flex justify-content-around flex-wrap mb-5 mobilequalificationview"
         style={{ width: "90%" }}
       >
         {/* educatonal details div */}
-        <div className="ml-5 p-3">
+        <div className="ml-5 p-3 mobilequalificationview">
           <h4 className="" style={{ paddingLeft: "7%" }}>
             Education
           </h4>
@@ -126,7 +126,7 @@ function About() {
 
         {/* experince div */}
 
-        <div className="mt-lg-0 mt-5 p-3">
+        <div className="mt-lg-0 mt-5 p-3 ml-5 mobilequalificationview">
           <h4 className="" style={{ paddingLeft: "7%" }}>
             Experience
           </h4>

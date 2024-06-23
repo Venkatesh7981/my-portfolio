@@ -14,7 +14,6 @@
   font-family: "Poppins", sans-serif;
 }
 .poetsen-one-regular {
-  
 }
 
 body {
@@ -376,6 +375,10 @@ textarea {
   }
   .mobileview {
     width: 100% !important;
+  }
+  .mobilequalificationview {
+    width: 100% !important;
+    margin: 15px !important;
   }
   .mobileview2 {
     max-width: 100% !important;
