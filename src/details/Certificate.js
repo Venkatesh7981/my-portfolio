@@ -14,6 +14,13 @@ const certificates = [
     link: "https://www.coursera.org/account/accomplishments/verify/X9ZKRCSQUXNX",
   },
   {
+    id: 10,
+    title: "React Basics",
+    img: "certificates/reactbasics.png",
+    issuer: "Coursera",
+    link: "https://coursera.org/share/c8707f465ace6fd0a8a3ba13718c21de",
+  },
+  {
     id: 3,
     title: "React Frontend Development",
     img: "certificates/reactfrontend.png",
@@ -55,6 +62,13 @@ const certificates = [
     img: "certificates/machinelearningedx.png",
     issuer: "Edx",
     link: "https://drive.google.com/file/d/1d9vxTcB56__uWAqIbHjqdPgvwMJYQ7Zu/view?usp=drive_link",
+  },
+  {
+    id: 11,
+    title: "Full Stack Mean Developer",
+    img: "certificates/meanstack.png",
+    issuer: "Rata Type",
+    link: "https://coursera.org/share/0f6b1aebd677e0b1bf46bd1eb9674b99",
   },
   {
     id: 9,
