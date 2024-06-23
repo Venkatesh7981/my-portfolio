@@ -5,12 +5,19 @@ function Sidebar(props) {
   const [color, setcolor] = useState("black");
   const [active, setactive] = useState("Home");
   const location = useLocation();
-
+  const name= "{B:L SARATH }";
   useEffect(() => {
     props.theme === "lighttheme" ? setcolor("black") : setcolor("white");
   }, [props.theme]);
   useEffect(() => {
-    setactive(location.pathname.substring(1));
+    if (location.pathname.includes("project")) {
+      console.log("path included project");
+      setactive("projects");
+      console.log("active", active);
+    } else {
+      setactive(location.pathname.substring(1));
+      console.log("active", active);
+    }
   }, [location.pathname]);
   return (
     <div
@@ -26,8 +33,16 @@ function Sidebar(props) {
         borderRadius: "10px",
       }}
     >
-      <h3 className="text-center fw-bold mt-4" style={{ color: "#f31559" }}>
-        B.L SARATH{" "}
+      <h3
+        className="text-center fw-bold mt-4 "
+        style={{
+          color: "#f31559",
+          fontFamily: "Poetsen One",
+          fontWeight: 400,
+          fontStyle: "normal",
+        }}
+      >
+        {name}
       </h3>
       <div
         className="d-flex justify-content-center align-items-center"
@@ -79,11 +94,16 @@ function Sidebar(props) {
             <li>
               <NavLink
                 to="/projects"
-                style={({ isActive }) => {
-                  return {
-                    color: isActive ? "#f31559" : color,
-                    textDecoration: "none",
-                  };
+                // style={({ isActive }) => {
+                //   return {
+                //     color: isActive ? "#f31559" : color,
+                //     textDecoration: "none",
+                //   } ,
+
+                // } }
+                style={{
+                  color: active === "projects" ? "#f31559" : color,
+                  textDecoration: "none",
                 }}
                 class="  navitem"
               >
@@ -112,6 +132,25 @@ function Sidebar(props) {
                   }`}
                 ></i>{" "}
                 Skills
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/certifications"
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "#f31559" : color,
+                    textDecoration: "none",
+                  };
+                }}
+                class="  navitem"
+              >
+                <i
+                  className={`m-2 fa-solid fa-certificate ${
+                    active === "certifications" ? "text-danger" : " "
+                  }`}
+                ></i>{" "}
+                Certifications
               </NavLink>
             </li>
             <li>

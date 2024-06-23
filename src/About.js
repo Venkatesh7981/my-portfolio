@@ -44,14 +44,14 @@ function About() {
             style={{ maxWidth: "55%" }}
           >
             <h6 style={{ lineHeight: 1.5 }}>
-              I'm Leela Sarath Baswa a B.Tech student who loves web development
-              and has a solid foundation in full stack development. Am always on
-              the lookout for opportunities to learn, grow and put my
+              I'm Leela Sarath Baswa, a B.Tech student who loves web development
+              and has a solid foundation in full-stack development. I am always
+              on the lookout for opportunities to learn, grow, and put my
               programming skills to use. My journey in the tech world started
-              with a curiosity for coding. I'm well versed in programming
-              languages like c++ ,python ,java and c and I'm always eager to
-              explore new tools and frameworks. Lets collaborate and discover
-              the possibilities together and lets create something remarkable !
+              with a curiosity for coding. I'm well-versed in programming
+              languages like C++, Python, Java, and C. I am also a DevOps
+              enthusiast, committed to continuous learning and always eager to
+              explore new tools and frameworks.
             </h6>
             <a
               href="../resume.pdf"
@@ -82,41 +82,38 @@ function About() {
           <h4 className="" style={{ paddingLeft: "7%" }}>
             Education
           </h4>
-          <div className="d-flex flex-column m-2">
+          <div className="d-flex flex-column m-2 timeline">
             <div
               className="m-3 boxitem"
-              data-aos="fade-up"
-              data-aos-delay="0"
-              data-aos-duration="1000"
               style={{ paddingLeft: "7%", width: "100%", maxHeight: "20%" }}
             >
+              <span className="timelinepoint"></span>
               <h6 className=" ">GMRIT (Rajam,Andhrapradesh)</h6>
               <p className=" m-0">computer science engineering</p>
               <p className="colorclass fw-bold m-0"> 2021-2025</p>
-              <p className="colorclass fw-bold m-0"> CGPA:9.2</p>
+              <p className="colorclass fw-bold m-0"> CGPA:9.30</p>
             </div>
             <div
               className="  m-3 boxitem"
-              data-aos="fade-up"
-              data-aos-delay="500"
-              data-aos-duration="1000"
               style={{ paddingLeft: "7%", width: "100%" }}
             >
+              <span className="timelinepoint"></span>
+
               <h6>
                 Narayana Junior College <br />
                 (Srikakulam,Andhrapradesh)
               </h6>
+
               <p className=" m-0">MPC</p>
               <p className="colorclass fw-bold m-0"> 2019-2020</p>
-              <p className="colorclass fw-bold m-0"> Percentage:95%</p>
+              <p className="colorclass fw-bold m-0"> Percentage:98%</p>
             </div>
             <div
               className=" m-3 boxitem"
-              data-aos="fade-up"
-              data-aos-delay="1000"
-              data-aos-duration="1000"
               style={{ paddingLeft: "7%", width: "100%" }}
             >
+              <span className="timelinepoint"></span>
+
               <h6>
                 Amruth Sai Vidya Mandir <br /> (Srikakulam,Andhrapradesh)
               </h6>
@@ -129,42 +126,51 @@ function About() {
 
         {/* experince div */}
 
-        <div className="mt-lg-0 mt-5">
-          <h4 style={{ paddingLeft: "7%" }}>Experience</h4>
-          <div className="d-flex flex-column">
+        <div className="mt-lg-0 mt-5 p-3">
+          <h4 className="" style={{ paddingLeft: "7%" }}>
+            Experience
+          </h4>
+          <div className="d-flex flex-column timeline">
             <div
               className="m-3 boxitem"
-              data-aos="fade-up"
-              data-aos-delay="100"
-              data-aos-duration="1000"
               style={{ paddingLeft: "7%", width: "100%", minHeight: "20%" }}
             >
+              <span className="timelinepoint"></span>
+
+              <h6>Option Mate research and consulting Pvt Ltd</h6>
+              <p>Full stack developer </p>
+              <p className="colorclass fw-bold m-0"> 2024-Present</p>
+            </div>
+            <div
+              className="m-3 boxitem"
+              style={{ paddingLeft: "7%", width: "100%", minHeight: "20%" }}
+            >
+              <span className="timelinepoint"></span>
+
               <h6>Wisenet automation pvt ltd</h6>
-              <p>As a full stack developer </p>
+              <p>Full stack developer </p>
               <p className="colorclass fw-bold m-0"> 2023</p>
             </div>
             <div
               className="  m-3 boxitem"
-              data-aos="fade-up"
-              data-aos-delay="2000"
-              data-aos-duration="1000"
               style={{ paddingLeft: "7%", width: "100%" }}
             >
+              <span className="timelinepoint"></span>
+
               <h6>Codechef Student chapter</h6>
-              <p>Tech Lead</p>
+              <p>Technical Lead & Event Manager</p>
               <p className="colorclass fw-bold m-0"> 2022-2025</p>
             </div>
-            <div
+            {/* <div
               className="  m-3 boxitem"
-              data-aos="fade-up"
-              data-aos-delay="2500"
-              data-aos-duration="1000"
               style={{ paddingLeft: "7%", width: "100%" }}
             >
+              <span className="timelinepoint"></span>
+
               <h6>GMRIT </h6>
               <p>Class Representative</p>
               <p className="colorclass fw-bold m-0"> 2021-2022</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -82,7 +82,7 @@ function Contact() {
       style={{ minHeight: "90vh", overflowY: "hidden" }}
     >
       <div>
-        <h2 className="fw-bold text-center">Contact me</h2>
+        <h2 className="fw-bold text-center">Contact Me</h2>
       </div>
       <div
         className="d-flex p-3  flex-wrap"

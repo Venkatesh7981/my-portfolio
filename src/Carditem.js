@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 function Carditem(props) {
-  console.log("in carditem", props.id);
+  // console.log("in carditem", props.id);
 
   useEffect(() => {
     AOS.init();
@@ -17,22 +17,22 @@ function Carditem(props) {
       <div
         data-aos="zoom-in"
         data-aos-duration="1500"
-        className="m-3 carditem "
+        className="m-3 carditem rounded-3"
         style={{
           width: "280px",
           height: "200px",
-          boxShadow: "5px 5px 5px #f31559",
+          boxShadow: "3px 3px 3px #f31559",
         }}
       >
         <img
-          className="rounded-2"
+        
           src={props.url}
           alt=""
           width="300px"
           height="200px"
         />
         <div className="carddetails">
-          <div
+          {/* <div
             className="bg-transparent"
             style={{ position: "absolute", top: "5%", right: "5%" }}
           >
@@ -42,19 +42,18 @@ function Carditem(props) {
               data-bs-target={`#${props.id}`}
               style={{ fontSize: "20px" }}
             />
-          </div>
+          </div> */}
           <p className="fw-bold text-white bg-transparent">{props.name} </p>
-          <p className="bg-transparent text-white">{props.tech}</p>
           <Link
             className="btn btn-light rounded-5"
-            to={props.link}
-            target="_blank"
+            // to={props.link}
+            to={`/project/${props.id}`}
           >
             <i class="fa-solid fa-up-right-from-square bg-light text-dark"></i>
           </Link>
         </div>
       </div>
-      <Modal name={props.name} description={props.description} id={props.id} />
+      {/* <Modal name={props.name} description={props.description} id={props.id} /> */}
     </div>
   );
 }

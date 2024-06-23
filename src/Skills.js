@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Skilltype from "./Skilltype";
-import Progress from "./Progress";
+
+import Skilltag from "./Skilltag";
 
 function Skills() {
-  const [type, settype] = useState("Professional skills");
+  const [type, settype] = useState("Frontend skills");
   const [animate, setanimate] = useState("pcontent");
   const restartanimation = () => {
     setanimate("");
@@ -15,47 +16,56 @@ function Skills() {
   };
 
   const renderprogressbar = () => {
-    if (type === "Professional skills") {
+    if (type === "Tools") {
       return (
-        <div className="m-lg-5 m-0">
-          <Progress language="communication" percent="70%" animate={animate} />
-          <Progress language="Teamlead" percent="90%" animate={animate} />
-          <Progress language="Hardworking" percent="90%" animate={animate} />
-          <Progress
-            language="Time management"
-            percent="90%"
-            animate={animate}
-          />
+        <div className="m-lg-5 m-0 d-flex gap-4 flex-wrap">
+          <Skilltag name="Postman" icon="devicon-postman-plain colored" />
+          <Skilltag name="Git" icon="devicon-git-plain colored" />
+          <Skilltag name="Github" icon="devicon-github-original colored" />
+          <Skilltag name="VS code" icon="devicon-visualstudio-plain colored" />
+          <Skilltag name="vercel" icon="devicon-vercel-original" />
+          <Skilltag name="npm" icon="devicon-npm-original-wordmark colored" />
+          <Skilltag name="Vagrant" icon="devicon-vagrant-plain colored" />
         </div>
       );
     } else if (type === "Frontend skills") {
       return (
-        <div className="m-lg-5 m-0">
-          <Progress language="Html" percent="60%" animate={animate} />
-          <Progress language="Css" percent="60%" animate={animate} />
-          <Progress language="Bootstrap" percent="60%" animate={animate} />
-          <Progress language="Javascript" percent="65%" animate={animate} />
-          <Progress language="React" percent="70%" animate={animate} />
+        <div className="m-lg-5 m-0 d-flex gap-4 flex-wrap ">
+          <Skilltag name="HTML" icon="devicon-html5-plain colored" />
+          <Skilltag name="CSS" icon="devicon-css3-plain colored" />
+          <Skilltag name="Tailwind" icon="devicon-tailwindcss-plain colored" />
+          <Skilltag name="Bootstrap" icon="devicon-bootstrap-plain colored" />
+          <Skilltag name="Javascript" icon="devicon-javascript-plain colored" />
+
+          <Skilltag name="React" icon="devicon-react-original colored" />
+          <Skilltag name="Next js" icon="devicon-nextjs-plain " />
+          <Skilltag
+            name="Redux Toolkit"
+            icon="devicon-redux-original colored"
+          />
         </div>
       );
     } else if (type === "Backend skills") {
       return (
-        <div className="m-lg-5 m-0">
-          <Progress language="Node js" percent="50%" animate={animate} />
-          <Progress language="Express js" percent="60%" animate={animate} />
-          <Progress language="PHP" percent="45%" animate={animate} />
-          <Progress language="MongoDB" percent="50%" animate={animate} />
-          <Progress language="MYSQL" percent="70%" animate={animate} />
+        <div className="m-lg-5 m-0 d-flex gap-4 flex-wrap">
+          <Skilltag name="Node js" icon="devicon-nodejs-plain colored" />
+          <Skilltag name="Express js" icon="devicon-express-original colored" />
+          <Skilltag name="Next js" icon="devicon-nextjs-plain " />
+
+          <Skilltag name="PHP" icon="devicon-php-plain colored" />
+          <Skilltag name="SocketIO" icon="devicon-socketio-original" />
+          <Skilltag name="MongoDB" icon="devicon-mongodb-plain colored" />
+          <Skilltag name="MYSQL" icon="devicon-mysql-plain colored" />
         </div>
       );
     } else if (type === "programming") {
       return (
-        <div className="m-lg-5 m-0">
-          <Progress language="Python" percent="70%" animate={animate} />
-          <Progress language="C++" percent="60%" animate={animate} />
-          <Progress language="c" percent="60%" animate={animate} />
-          <Progress language="Java" percent="55%" animate={animate} />
-          <Progress language="DSA" percent="50%" animate={animate} />
+        <div className="m-lg-5 m-0 d-flex gap-4 flex-wrap">
+          <Skilltag name="C++" icon="devicon-cplusplus-plain colored" />
+          <Skilltag name="Python" icon="devicon-python-plain colored" />
+          <Skilltag name="Java" icon="devicon-java-plain colored" />
+          <Skilltag name="C" icon="devicon-c-plain colored" />
+          <Skilltag name="DSA" icon="devicon-thealgorithms-plain colored" />
         </div>
       );
     }
@@ -63,33 +73,27 @@ function Skills() {
   return (
     <div>
       <h3
-        className="text-center m-5 fw-bold"
-        style={{ marginTop: "8%", height: "100%" }}
+        className="text-center fw-bold"
+        style={{ marginTop: "4%", height: "100%" }}
       >
         My Skills
       </h3>
       <div
-        className="d-flex justify-content-center align-items-center"
-        style={{ width: "100%", height: "100%" }}
+        className="d-flex justify-content-center align-items-center "
+        style={{ width: "100%", height: "100%", padding: 0 }}
       >
         {/* skill container */}
         <div
-          className="d-flex flex-row flex-wrap p-3 "
-          style={{ width: "80%", maxHeight: "400px", minHeight: "400px" }}
+          className="d-flex flex-row flex-wrap  "
+          style={{ width: "90%", maxHeight: "420px", minHeight: "420px" }}
         >
           {/* skills types */}
           <div
             data-aos="zoom-in"
             data-aos-duration="1500"
             style={{ width: "40%" }}
-            className=" d-flex justify-content-center align-items-center flex-column skillcontainer mobileview"
+            className=" d-flex justify-content-center align-items-center flex-column skillcontainer mobileview "
           >
-            <Skilltype
-              func={onclickfunc}
-              type="Professional skills"
-              current={type}
-              icon1="fa-solid fa-user-tie"
-            />
             <Skilltype
               func={onclickfunc}
               type="Frontend skills"
@@ -106,14 +110,20 @@ function Skills() {
               func={onclickfunc}
               type="programming"
               current={type}
-              icon1="fa-solid fa-code"
+              icon1="fa-solid fa-laptop-code"
+            />
+            <Skilltype
+              func={onclickfunc}
+              type="Tools"
+              current={type}
+              icon1="fa-solid fa-toolbox"
             />
           </div>
           {/* progress bars */}
 
           <div
             style={{ width: "60%" }}
-            className="p-lg-4 p-0 mt-lg-0 mt-4 mobileview"
+            className="p-lg-2  p-0 mobileview mobileskillmargin"
           >
             {renderprogressbar()}
           </div>

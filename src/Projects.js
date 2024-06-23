@@ -12,8 +12,10 @@ function Projects() {
   const [toggleall, settoggleall] = useState(true);
   const [togglefront, settogglefront] = useState(false);
   const [toggleback, settoggleback] = useState(false);
+  const [toggleapp, settoggleapp] = useState(false);
   const frontendcards = cardData.filter((item) => item.type === "frontend");
   const fullstackcards = cardData.filter((item) => item.type === "fullstack");
+  const appdevcards = cardData.filter((item) => item.type === "appdev");
 
   const renderprojects = () => {
     if (toggleall) {
@@ -23,7 +25,7 @@ function Projects() {
           style={{ width: "100%" }}
         >
           {cardData.map((item, index) => {
-            console.log("i mp", index);
+            {/* console.log("i mp", index); */}
             return (
               <Carditem
                 key={index}
@@ -32,7 +34,6 @@ function Projects() {
                 name={item.name}
                 tech={item.tech}
                 link={item.link}
-              
                 description={item.description}
               />
             );
@@ -81,6 +82,27 @@ function Projects() {
           })}
         </div>
       );
+    } else if (toggleapp) {
+      return (
+        <div
+          className="d-flex flex-wrap p-2 m-2  justify-content-center align-items-center"
+          style={{ width: "100%" }}
+        >
+          {appdevcards.length>0 ? appdevcards.map((item, index) => {
+            return (
+              <Carditem
+                key={index}
+                url={item.url}
+                name={item.name}
+                id={item.id}
+                tech={item.tech}
+                link={item.link}
+                description={item.description}
+              />
+            );
+          }) :<h1>Adding soon...</h1>}
+        </div>
+      );
     }
   };
   return (
@@ -90,14 +112,14 @@ function Projects() {
     >
       {/* selection div */}
       <div>
-        <h2 className="text-white mb-4 fw-bold">My Projects</h2>
+        <h2 className="mb-4 fw-bold">My Projects</h2>
       </div>
       <div
-        className="d-flex justify-content-center align-items-center"
-        style={{ width: "25%" }}
+        className="d-flex justify-content-center align-items-center flex-wrap gap-3"
+        style={{ width: "80%" }}
       >
         <button
-          className="btn btn-dark m-2 selection "
+          className="btn btn-dark selection "
           style={{
             backgroundColor: toggleall ? " #F31559" : "rgb(52, 46, 46)",
           }}
@@ -105,12 +127,13 @@ function Projects() {
             settoggleall(true);
             settogglefront(false);
             settoggleback(false);
+            settoggleapp(false);
           }}
         >
           All
         </button>
         <button
-          className="btn btn-dark m-2 selection"
+          className="btn btn-dark selection"
           style={{
             backgroundColor: togglefront ? " #F31559" : "rgb(52, 46, 46)",
           }}
@@ -118,12 +141,13 @@ function Projects() {
             settogglefront(true);
             settoggleall(false);
             settoggleback(false);
+            settoggleapp(false);
           }}
         >
           Frontend
         </button>
         <button
-          className="btn btn-dark m-2 selection"
+          className="btn btn-dark  selection"
           style={{
             backgroundColor: toggleback ? " #F31559" : "rgb(52, 46, 46)",
           }}
@@ -131,9 +155,25 @@ function Projects() {
             settoggleback(true);
             settoggleall(false);
             settogglefront(false);
+            settoggleapp(false);
           }}
         >
           Fullstack
+        </button>
+
+        <button
+          className="btn btn-dark  selection"
+          style={{
+            backgroundColor: toggleapp ? " #F31559" : "rgb(52, 46, 46)",
+          }}
+          onClick={() => {
+            settoggleback(false);
+            settoggleall(false);
+            settogglefront(false);
+            settoggleapp(true);
+          }}
+        >
+          App Dev
         </button>
       </div>
       {/* projects content div */}

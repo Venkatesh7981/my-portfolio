@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import TypewriterText from "./Typewriter";
 
 function Home() {
-  let textarray = ["Web Developer", "Coder"];
+  let textarray = ["Web Developer", "Programmer", "DevOps Enthusiast"];
   return (
     <div
       className="d-flex justify-content-center align-items-center"
@@ -14,7 +14,7 @@ function Home() {
         style={{ marginTop: "8%", width: "100%" }}
       >
         <div
-          className="p-lg-5 p-5 mobileview"
+          className="p-lg-5 p-4 mobileview"
           data-aos="fade-right"
           data-aos-duration="1200"
           style={{ width: "60%", letterSpacing: "1.0px" }}

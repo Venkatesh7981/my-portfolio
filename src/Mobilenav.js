@@ -39,6 +39,13 @@ function Mobilenav(props) {
           }`}
         ></i>
       </Link>
+      <Link to="/certifications">
+        <i
+          className={`m-2 fa-solid fa-certificate fa-2x ${
+            active === "certifications" ? "text-danger" : " "
+          }`}
+        ></i>
+      </Link>
 
       <Link to="/contact">
         <i
