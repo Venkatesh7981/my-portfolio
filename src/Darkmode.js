@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-
 import { BsSun } from "react-icons/bs";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 
 function Darkmode({ updatetheme, theme }) {
-  const [isSunIcon, setIsSunIcon] = useState(false);
   const [animate, setanimate] = useState("");
+
   const restartanimation = () => {
     setanimate("");
     setTimeout(() => setanimate("sunicon"), 10);
@@ -15,7 +14,6 @@ function Darkmode({ updatetheme, theme }) {
     <div className="darkmode">
       <div
         onClick={() => {
-          setIsSunIcon((prev) => !prev);
           restartanimation();
           updatetheme();
         }}
@@ -29,8 +27,6 @@ function Darkmode({ updatetheme, theme }) {
             <BsFillMoonStarsFill style={{ fontSize: "40px" }} />
           </div>
         )}
-        {/* <i class={`fa-solid fa-sun ${animate} fa-2x text-warning`}></i> */}
-        {/* <i class={`fa-solid fa-moon ${animate} moonrotate fa-3x`}></i> */}
       </div>
     </div>
   );

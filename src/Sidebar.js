@@ -9,16 +9,15 @@ function Sidebar(props) {
   useEffect(() => {
     props.theme === "lighttheme" ? setcolor("black") : setcolor("white");
   }, [props.theme]);
-  useEffect(() => {
-    if (location.pathname.includes("project")) {
-      console.log("path included project");
-      setactive("projects");
-      console.log("active", active);
-    } else {
-      setactive(location.pathname.substring(1));
-      console.log("active", active);
-    }
-  }, [location.pathname]);
+ useEffect(() => {
+  if (location.pathname.includes("project")) {
+    setactive("projects");
+  } else {
+    setactive(location.pathname.substring(1));
+  }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [location.pathname]);
+
   return (
     <div
       class={`d-flex flex-column sidebar flex-shrink  ${props.theme}`}

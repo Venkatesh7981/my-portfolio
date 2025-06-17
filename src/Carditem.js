@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ImInfo } from "react-icons/im";
-import Modal from "./Modal";
+// import { ImInfo } from "react-icons/im";
+// import Modal from "./Modal";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
