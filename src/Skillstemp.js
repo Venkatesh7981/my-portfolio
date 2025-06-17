@@ -43,7 +43,6 @@ function Skills() {
         <div className="m-lg-5 m-0">
           <Progress language="Node js" percent="50%" animate={animate} />
           <Progress language="Express js" percent="60%" animate={animate} />
-          <Progress language="PHP" percent="45%" animate={animate} />
           <Progress language="MongoDB" percent="50%" animate={animate} />
           <Progress language="MYSQL" percent="70%" animate={animate} />
         </div>
@@ -52,7 +51,7 @@ function Skills() {
       return (
         <div className="m-lg-5 m-0">
           <Progress language="Python" percent="70%" animate={animate} />
-          <Progress language="C++" percent="60%" animate={animate} />
+          {/* <Progress language="C++" percent="60%" animate={animate} /> */}
           <Progress language="c" percent="60%" animate={animate} />
           <Progress language="Java" percent="55%" animate={animate} />
           <Progress language="DSA" percent="50%" animate={animate} />

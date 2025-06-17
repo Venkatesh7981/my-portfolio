@@ -27,7 +27,7 @@ function About() {
             >
               <div className="p-4">
                 <img
-                  src="../images/profile2.png"
+                  src="../images/logo.png"
                   alt="profilepic"
                   className="profileimg"
                   style={{
@@ -44,14 +44,17 @@ function About() {
             style={{ maxWidth: "55%" }}
           >
             <h6 style={{ lineHeight: 1.5 }}>
-              I'm Leela Sarath Baswa a B.Tech student who loves web development
-              and has a solid foundation in full stack development. Am always on
-              the lookout for opportunities to learn, grow and put my
-              programming skills to use. My journey in the tech world started
-              with a curiosity for coding. I'm well versed in programming
-              languages like c++ ,python ,java and c and I'm always eager to
-              explore new tools and frameworks. Lets collaborate and discover
-              the possibilities together and lets create something remarkable !
+              Hi, I'm Kuruva Venkatesh — a B.Tech student passionate about
+              Web Development and Artificial Intelligence & Machine Learning (AI & ML).
+              I have a solid foundation in full-stack development and love building interactive,
+              user-friendly applications. My journey in tech began with a strong curiosity for coding,
+              which has grown into a commitment to continuous learning and innovation.
+              I'm skilled in programming languages like C, Java, and Python, 
+              and I’m constantly exploring new tools, frameworks,
+              and technologies to stay updated in this fast-evolving field. 
+              My focus is on developing modern web applications and applying AI/ML concepts to solve real-world problems.
+              I'm always on the lookout for opportunities to learn, collaborate,
+               and apply my skills to meaningful projects.
             </h6>
             <a
               href="../resume.pdf"

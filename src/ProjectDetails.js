@@ -48,25 +48,7 @@ const ProjectDetails = () => {
           className="d-flex p-md-5 p-0 flex-column mobileview "
           style={{ width: "50%" }}
         >
-          {project.youtubelink === "" ? (
-            <div
-              className="d-flex justify-content-center align-items-center"
-              style={{ width: "100%", height: "200px" }}
-            >
-              video not available
-            </div>
-          ) : (
-            <div>
-              <iframe
-                src={project.youtubelink}
-                title="YouTube video player"
-                width="100%"
-                height="300px"
-                frameborder="0"
-                alt="youtube video"
-              ></iframe>
-            </div>
-          )}
+          
           {project.link === "" ? (
             <div className="d-flex gap-4  justify-content-center align-items-center  m-2">
               <span

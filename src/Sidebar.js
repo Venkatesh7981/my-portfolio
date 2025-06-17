@@ -5,7 +5,7 @@ function Sidebar(props) {
   const [color, setcolor] = useState("black");
   const [active, setactive] = useState("Home");
   const location = useLocation();
-  const name= "{B:L SARATH }";
+  const name= "{VENKATESH}";
   useEffect(() => {
     props.theme === "lighttheme" ? setcolor("black") : setcolor("white");
   }, [props.theme]);

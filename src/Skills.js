@@ -23,9 +23,9 @@ function Skills() {
           <Skilltag name="Git" icon="devicon-git-plain colored" />
           <Skilltag name="Github" icon="devicon-github-original colored" />
           <Skilltag name="VS code" icon="devicon-visualstudio-plain colored" />
-          <Skilltag name="vercel" icon="devicon-vercel-original" />
+          {/* <Skilltag name="vercel" icon="devicon-vercel-original" /> */}
           <Skilltag name="npm" icon="devicon-npm-original-wordmark colored" />
-          <Skilltag name="Vagrant" icon="devicon-vagrant-plain colored" />
+          {/* <Skilltag name="Vagrant" icon="devicon-vagrant-plain colored" /> */}
         </div>
       );
     } else if (type === "Frontend skills") {
@@ -33,12 +33,12 @@ function Skills() {
         <div className="m-lg-5 m-0 d-flex gap-4 flex-wrap ">
           <Skilltag name="HTML" icon="devicon-html5-plain colored" />
           <Skilltag name="CSS" icon="devicon-css3-plain colored" />
-          <Skilltag name="Tailwind" icon="devicon-tailwindcss-plain colored" />
+          {/* <Skilltag name="Tailwind" icon="devicon-tailwindcss-plain colored" /> */}
           <Skilltag name="Bootstrap" icon="devicon-bootstrap-plain colored" />
           <Skilltag name="Javascript" icon="devicon-javascript-plain colored" />
 
           <Skilltag name="React" icon="devicon-react-original colored" />
-          <Skilltag name="Next js" icon="devicon-nextjs-plain " />
+          {/* <Skilltag name="Next js" icon="devicon-nextjs-plain " /> */}
           <Skilltag
             name="Redux Toolkit"
             icon="devicon-redux-original colored"
@@ -49,19 +49,15 @@ function Skills() {
       return (
         <div className="m-lg-5 m-0 d-flex gap-4 flex-wrap">
           <Skilltag name="Node js" icon="devicon-nodejs-plain colored" />
-          <Skilltag name="Express js" icon="devicon-express-original colored" />
-          <Skilltag name="Next js" icon="devicon-nextjs-plain " />
-
-          <Skilltag name="PHP" icon="devicon-php-plain colored" />
-          <Skilltag name="SocketIO" icon="devicon-socketio-original" />
-          <Skilltag name="MongoDB" icon="devicon-mongodb-plain colored" />
+          <Skilltag name="Express js" icon="devicon-express-original colored" />     
+      <Skilltag name="MongoDB" icon="devicon-mongodb-plain colored" />
           <Skilltag name="MYSQL" icon="devicon-mysql-plain colored" />
         </div>
       );
     } else if (type === "programming") {
       return (
         <div className="m-lg-5 m-0 d-flex gap-4 flex-wrap">
-          <Skilltag name="C++" icon="devicon-cplusplus-plain colored" />
+          {/* <Skilltag name="C++" icon="devicon-cplusplus-plain colored" /> */}
           <Skilltag name="Python" icon="devicon-python-plain colored" />
           <Skilltag name="Java" icon="devicon-java-plain colored" />
           <Skilltag name="C" icon="devicon-c-plain colored" />

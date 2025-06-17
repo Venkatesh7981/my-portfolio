@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./App.css";
 
 import { useLocation } from "react-router-dom";
@@ -27,7 +27,7 @@ function About() {
             >
               <div className="p-4">
                 <img
-                  src="../images/profile2.png"
+                  src="../images/logo.jpg"
                   alt="profilepic"
                   className="profileimg"
                   style={{
@@ -44,17 +44,15 @@ function About() {
             style={{ maxWidth: "55%" }}
           >
             <h6 style={{ lineHeight: 1.5 }}>
-              I'm Leela Sarath Baswa, a B.Tech student who loves web development
-              and has a solid foundation in full-stack development. I am always
-              on the lookout for opportunities to learn, grow, and put my
-              programming skills to use. My journey in the tech world started
-              with a curiosity for coding. I'm well-versed in programming
-              languages like C++, Python, Java, and C. I am also a DevOps
-              enthusiast, committed to continuous learning and always eager to
-              explore new tools and frameworks.
+              Hi, I'm Kuruva Venkatesh — a B.Tech student passionate about Web Development and AI & ML.
+              I enjoy building interactive, user-friendly applications and exploring new technologies to stay current in the field. 
+              I'm skilled in C, Java, and Python, with a strong focus on full-stack development and applying AI/ML to real-world problems.
+              I'm always eager to learn, collaborate, and grow through hands-on experience.
+
+
             </h6>
             <a
-              href="../resume.pdf"
+              href="./images/resume.pdf"
               download
               target="_blank"
               className="btn button colorbg text-white  mt-3 rounded-5 "
@@ -88,10 +86,10 @@ function About() {
               style={{ paddingLeft: "7%", width: "100%", maxHeight: "20%" }}
             >
               <span className="timelinepoint"></span>
-              <h6 className=" ">GMRIT (Rajam,Andhrapradesh)</h6>
-              <p className=" m-0">computer science engineering</p>
-              <p className="colorclass fw-bold m-0"> 2021-2025</p>
-              <p className="colorclass fw-bold m-0"> CGPA:9.30</p>
+              <h6 className=" ">RGMCET (Nandyal,Andhrapradesh)</h6>
+              <p className=" m-0">computer science engineering(AI&ML)</p>
+              <p className="colorclass fw-bold m-0"> 2022-2026</p>
+              <p className="colorclass fw-bold m-0"> CGPA:8.0</p>
             </div>
             <div
               className="  m-3 boxitem"
@@ -100,13 +98,13 @@ function About() {
               <span className="timelinepoint"></span>
 
               <h6>
-                Narayana Junior College <br />
-                (Srikakulam,Andhrapradesh)
+                Andhra Pradesh Social Welfare Residential Jr College<br />
+                (Kurnool,Andhrapradesh)
               </h6>
 
               <p className=" m-0">MPC</p>
-              <p className="colorclass fw-bold m-0"> 2019-2020</p>
-              <p className="colorclass fw-bold m-0"> Percentage:98%</p>
+              <p className="colorclass fw-bold m-0"> 2019-2021</p>
+              <p className="colorclass fw-bold m-0"> Percentage:90%</p>
             </div>
             <div
               className=" m-3 boxitem"
@@ -115,11 +113,11 @@ function About() {
               <span className="timelinepoint"></span>
 
               <h6>
-                Amruth Sai Vidya Mandir <br /> (Srikakulam,Andhrapradesh)
+               Shanthi Talent EM High School <br /> (Pathikonda,Kurnool,Andhrapradesh)
               </h6>
               <p className=" m-0">SSC</p>
-              <p className="colorclass fw-bold m-0"> 2018</p>
-              <p className="colorclass fw-bold m-0"> Grade:10.00</p>
+              <p className="colorclass fw-bold m-0"> 2019</p>
+              <p className="colorclass fw-bold m-0"> CGPA:9.7</p>
             </div>
           </div>
         </div>
@@ -131,25 +129,16 @@ function About() {
             Experience
           </h4>
           <div className="d-flex flex-column timeline">
+           
             <div
               className="m-3 boxitem"
               style={{ paddingLeft: "7%", width: "100%", minHeight: "20%" }}
             >
               <span className="timelinepoint"></span>
 
-              <h6>Option Mate research and consulting Pvt Ltd</h6>
-              <p>Full stack developer </p>
-              <p className="colorclass fw-bold m-0"> 2024-Present</p>
-            </div>
-            <div
-              className="m-3 boxitem"
-              style={{ paddingLeft: "7%", width: "100%", minHeight: "20%" }}
-            >
-              <span className="timelinepoint"></span>
-
-              <h6>Wisenet automation pvt ltd</h6>
-              <p>Full stack developer </p>
-              <p className="colorclass fw-bold m-0"> 2023</p>
+              <h6> Eduskills-AIML Virtual Internship</h6>
+              <p>Intern – Artificial Intelligence & Machine Learning</p>
+              <p className="colorclass fw-bold m-0">2023-Sep</p>
             </div>
             <div
               className="  m-3 boxitem"
@@ -157,9 +146,20 @@ function About() {
             >
               <span className="timelinepoint"></span>
 
-              <h6>Codechef Student chapter</h6>
-              <p>Technical Lead & Event Manager</p>
-              <p className="colorclass fw-bold m-0"> 2022-2025</p>
+              <h6>Eduskills</h6>
+              <p>Web development</p>
+              <p className="colorclass fw-bold m-0"> 2024-Aug</p>
+            </div>
+             <div
+              className="m-3 boxitem"
+              style={{ paddingLeft: "7%", width: "100%", minHeight: "20%" }}
+            >
+              <span className="timelinepoint"></span>
+
+              <h6>Runtime Robotics</h6>
+              <p>Robotics Intern</p>
+              <p className="colorclass fw-bold m-0">2025 - Present</p>
+
             </div>
             {/* <div
               className="  m-3 boxitem"

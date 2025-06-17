@@ -12,7 +12,7 @@ function Contactinfo() {
         className="contactitem p-3"
       >
         <Link
-          to="https://www.linkedin.com/in/leelasarath-baswa"
+          to="https://www.linkedin.com/in/kuruva-venkatesh-10a743280/"
           target="_blank"
         >
           {" "}
@@ -21,44 +21,44 @@ function Contactinfo() {
         <h6>Linkedin</h6>
 
         <Link
-          to="https://www.linkedin.com/in/leelasarath-baswa"
+          to="https://www.linkedin.com/in/kuruva-venkatesh-10a743280/"
           target="_blank"
           style={{ textDecoration: "none", color: "#F31559" }}
         >
           Connect with me
         </Link>
       </div>
-      <div
+      {/* <div
         data-aos="flip-left"
         data-aos-duration="500"
         data-aos-delay="500"
         className="contactitem p-3"
       >
-        <Link to="mailto:leelasarathbaswa@gmail.com">
+        <Link to="mailto:venkateshkuruva383@gmail.com">
           <i className="fa-solid fa-envelope fa-2x  m-2"></i>
         </Link>
         <h6>Email</h6>
 
         <Link
-          to="mailto:leelasarathbaswa@gmail.com"
+          to="mailto:venkateshkuruva383@gmail.com"
           style={{ textDecoration: "none", color: "#F31559" }}
         >
           Write me
         </Link>
-      </div>
+      </div> */}
       <div
         data-aos="flip-right"
         data-aos-duration="500"
         data-aos-delay="1000"
         className="contactitem p-3"
       >
-        <Link to="https://wa.me/918074135072" target="_blank">
+        <Link to="https://wa.me/7981715071" target="_blank">
           <i className="fa-brands fa-whatsapp fa-2x  m-2 "></i>
         </Link>
         <h6>Whatsapp</h6>
 
         <Link
-          to="https://wa.me/918074135072"
+          to="https://wa.me/7981715071"
           target="_blank"
           style={{ textDecoration: "none", color: "#F31559" }}
         >

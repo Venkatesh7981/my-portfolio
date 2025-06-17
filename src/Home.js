@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import TypewriterText from "./Typewriter";
 
 function Home() {
-  let textarray = ["Web Developer", "Programmer", "DevOps Enthusiast"];
+  let textarray = ["Web Developer", "Programmer", "AIML Enthusiast"];
   return (
     <div
       className="d-flex justify-content-center align-items-center"
@@ -21,7 +21,7 @@ function Home() {
         >
           <h3>
             Hello,my name is <br />{" "}
-            <span className=" fw-bold mt-5 colorclass">Baswa Leela Sarath</span>
+            <span className=" fw-bold mt-5 colorclass">Kuruva Venkatesh</span>
           </h3>
           <h2>
             I'm a{" "}
@@ -41,8 +41,9 @@ function Home() {
               // fontSize: "clamp(20rem,1vw+10rem,50rem)",
             }}
           >
-            Hello! I'm a web developer who turns ideas into interactive
-            websites. I code, design, and make digital magic happen. <br />
+           Hello! I'm an AI & ML student and passionate web developer who brings
+            ideas to life through clean code and creative design.  
+           I build intelligent and interactive websites, blending technology and innovation <br />
             Let's explore my portfolio .
           </h6>
           <Link
@@ -61,7 +62,7 @@ function Home() {
               data-aos-duration="1200"
             >
               <img
-                src="../images/profile1.png"
+                src="../images/Logo.jpg"
                 alt="profilepic"
                 className="profileimg"
                 style={{

@@ -23,14 +23,14 @@ const Certificate = (props) => {
       <div className="certificatedetails p-3 d-flex justify-content-center align-items-center flex-column">
         <h4 className="text-center">{props.title}</h4>
         <p className="text-center mt-2">{props.description}</p>
-        <Link
+        {/* <Link
           to={props.link}
           className="btn button colorbg text-white  mt-3 rounded-5 "
           target="_blank"
         >
           {" "}
           View Certificate
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

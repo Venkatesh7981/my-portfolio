@@ -80,6 +80,8 @@ function Projects() {
               />
             );
           })}
+          {fullstackcards.length === 0 && <h1>Adding
+            soon...</h1>}
         </div>
       );
     } else if (toggleapp) {
@@ -173,7 +175,7 @@ function Projects() {
             settoggleapp(true);
           }}
         >
-          App Dev
+          AI&ML
         </button>
       </div>
       {/* projects content div */}
