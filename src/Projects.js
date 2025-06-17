@@ -24,20 +24,17 @@ function Projects() {
           className="d-flex flex-wrap justify-content-center align-items-center p-2 m-2"
           style={{ width: "100%" }}
         >
-          {cardData.map((item, index) => {
-            {/* console.log("i mp", index); */}
-            return (
-              <Carditem
-                key={index}
-                id={item.id}
-                url={item.url}
-                name={item.name}
-                tech={item.tech}
-                link={item.link}
-                description={item.description}
-              />
-            );
-          })}
+         {cardData.map((item, index) => (
+  <Carditem
+    key={index}
+    id={item.id}
+    url={item.url}
+    name={item.name}
+    tech={item.tech}
+    link={item.link}
+    description={item.description}
+  />
+))}
         </div>
       );
     } else if (togglefront) {
